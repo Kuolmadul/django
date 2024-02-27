@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dorms</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <td>Name</td>
+        <td>color</td>
+        <td>Size</td>
+    </tr>
+    {% for p in dorms %}
+
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.color }}</td>
+        <td>{{ p.size }}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=20, blank=False)
@@ -19,10 +20,4 @@ class Teacher(models.Model):
     def __str__(self):
         return self.name
 
-class School(models.Model):
-    name = models.CharField(max_length=25)
-    location = models.CharField(blank=False)
-    category = models.CharField(blank=False)
 
-    def __str__(self):
-        return self.name
