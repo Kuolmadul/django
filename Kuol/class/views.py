@@ -5,15 +5,18 @@ from . models import Student, Dormitory
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html')
+    return render(request, 'index.html')
 
 def about(request):
-    return render(request,'about.html')
+    return render(request, 'about.html')
 
 def student(request):
     students = Student.objects.all()
-    return render(request,'student.html',{"students":students})
+    return render(request, 'student.html', {"students": students})
 
 def dormitory(request):
     dormitories = Dormitory.objects.all()
-    return render(request,'dormitories.html',{"dormitory":dormitories})
+    return render(request, 'dormitories.html', {"dormitory": dormitories})
+
+def insert_students(request):
+    return render(request,'insertstudents.html')
